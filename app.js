@@ -1,4 +1,19 @@
-//Generates the computer's play hand
+//Selction variables 
+const computerSelection = computerPlay();
+const playerSelection = playerPlay();
+
+//Prompt, validate, and store user's play hand
+function playerPlay() {
+    let playerInput = prompt("Please chose between 'rock', 'paper' or 'scissors'");
+    if (playerInput.toLowerCase() !== 'rock' && playerInput.toLowerCase() !== 'scissors' && playerInput.toLowerCase() !== 'paper'){
+        return playerPlay();
+    } else {
+        return playerInput;
+    }
+};
+
+
+//Generates the computer's selection
 function computerPlay () {
     let compRandom = function getRandomInt() {
         let rand = Math.floor((Math.random() * 3) + 1);
