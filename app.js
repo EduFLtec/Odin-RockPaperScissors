@@ -1,13 +1,18 @@
 function game() {
+    //Round result varriables
+    let playerWin = 0;
+    let computerWin = 0;
+    let tie = 0;
+    //Play the game for five rounds
     for (let i = 0; i < 5; i++) {
         janken(i);
 
         function janken() {
-            //Selction variables 
+            //Selction result variables 
             const computerSelection = computerPlay();
             const playerSelection = playerPlay();
-            const callRound = playRound();
             
+
 
             //Prompt, validate, and store user's play hand
             function playerPlay() {
@@ -37,40 +42,49 @@ function game() {
             }
 
             //Determine the winner
-            function playRound() {
-                let playerWin = 0;
-                let computerWin = 0;
-                let tie = 0;
-                if (playerSelection == 'rock' && computerSelection == 'rock') {
-                    tie++
-                    console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
-                } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-                    computerWin++
-                    console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
-                } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-                    playerWin++
-                    console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`);
-                } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-                    playerWin++
-                    console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`);
-                } else if (playerSelection == 'paper' && computerSelection == 'paper') {
-                    tie++
-                    console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
-                } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-                    computerWin++
-                    console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
-                } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-                    computerWin++
-                    console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
-                } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-                    playerWin++
-                    console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`);
-                } else {
-                    tie++
-                    console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`)
+                function playRound() {
+                    if (playerSelection == 'rock' && computerSelection == 'rock') {
+                        tie++
+                        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
+                    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
+                        computerWin++
+                        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
+                    } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
+                        playerWin++
+                        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`);
+                    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
+                        playerWin++
+                        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`);
+                    } else if (playerSelection == 'paper' && computerSelection == 'paper') {
+                        tie++
+                        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
+                    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
+                        computerWin++
+                        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
+                    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
+                        computerWin++
+                        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
+                    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+                        playerWin++
+                        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`);
+                    } else {
+                        tie++
+                        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
+                    }
                 }
-            }
-            return callRound;
+            //Print the results of each round
+            return playRound();
         }
     }
+    //Compare and tally round results. Declare an overall game winner. 
+    function gameResults() {
+        if (playerWin > computerWin){
+            console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU are the CHAMPION!!!`);
+        } else if (computerWin > playerWin) {
+            console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU LOSE!!!`);
+        } else {
+            console.log(`You won ${playerWin}x and the computer won ${computerWin}x. It's a TIE!!!`);
+        }
+    }
+    return gameResults();
 }
