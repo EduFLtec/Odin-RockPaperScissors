@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="app.js"></script>
-</body>
-</html>
+  <html>
+    <head>
+      <link rel="shortcut icon" type="image/x-icon" href="img/favi.ico">
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Rock Paper Scissors</title>
+    </head>     
+    <body class="lime lighten-3">
+      <h1 class="center" id="game-title">Rock Paper Scissors</h1>
+      <div class="card sticky-action hoverable" id="game-card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="cyan lighten-3" src="img/rpsRules.png" id="game-img">
+        </div>
+        <div class="card-content cyan darken-1">
+          <h2>Play?<i class="material-icons right activator">play_circle_outline</i></h2>
+        </div>
+        <div class="card-action amber darken-1 row" id="score-card">
+          <p class="col m4 s12" id="player-score">Player: </p>
+          <p class="col m4 s12" id="cpu-score">Computer: </p>
+          <p class="col m4 s12" id="tie-score">Ties: </p>
+        </div>
+        <div class="card-reveal" id="choice">
+          <div class="center">
+            <div class="col s12" id="play-instructions">
+              <i class="material-icons right activator">cancel</i>
+              <p>Make your choice</p>
+            </div>
+            <img class="col m4 s4 hoverable activator"src="img/rock.png" alt="">
+            <img class="col m4 s4 hoverable activator"src="img/paper.png" alt="">
+            <img class="col m4 s4 hoverable activator"src="img/scissors.png" alt="">
+          </div>
+        </div>
+
+      </div>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/bin/materialize.js"></script>
+      <script type="text/javascript" src="js/bin/app.js"></script>
+    </body>
+  </html>
