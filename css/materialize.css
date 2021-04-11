@@ -8197,7 +8197,9 @@ input[type=range]::-ms-thumb {
   margin: 1rem;
 }
 
-#game-img,
+#game-start,
+#game-win,
+#game-lost,
 #round-won,
 #round-lost,
 #round-tie {
@@ -8207,6 +8209,8 @@ input[type=range]::-ms-thumb {
   margin: auto;
 }
 
+#game-win,
+#game-lost,
 #round-won,
 #round-lost,
 #round-tie {
@@ -8232,14 +8236,14 @@ input[type=range]::-ms-thumb {
 #choice .material-icons {
   display: block;
   font-size: 2rem;
+  text-align: right;
+  padding: 0;
 }
 #choice p {
-  display: inline-block;
+  display: block;
   font-size: 2rem;
   font-weight: 500;
-  margin-left: 3.5rem;
-  margin-top: 2rem;
-  margin-bottom: 0.2rem;
+  margin: auto;
 }
 #choice img {
   height: 10rem;
