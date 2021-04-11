@@ -1,0 +1,113 @@
+// See HTML for general layout
+
+body {
+    @extend .lime, .lighten-3;
+}
+
+#game-title {
+    font-size: 3rem;
+    border-style: solid;
+    border-radius: 1rem;
+    padding: .5rem;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    @extend .white-text, .cyan, .darken-1; 
+}
+
+#game-card {
+    margin: 1rem;
+
+    & #game-start {
+        @extend .cyan, .lighten-3;
+    }
+
+    & #round-won {
+        @extend .green, .accent-3; 
+    }
+
+    & #round-lost {
+        @extend .deep-orange, .accent-3;
+    }
+
+    & #round-tie {
+        @extend .purple, .accent-2;
+    }
+
+    & #game-win {
+        @extend .cyan, .lighten-3;
+    }
+
+    & #game-lost{
+        @extend .orange, .accent-3;
+    }
+
+    & #game-start,
+        #round-won,
+        #round-lost,
+        #round-tie,
+        #game-win,
+        #game-lost {
+            height: 20rem;
+            object-fit: contain;
+            margin: auto;
+        }
+
+    & #round-won,
+        #round-lost,
+        #round-tie,
+        #game-win,
+        #game-lost {
+            display: none;
+        }
+
+}
+
+.material-icons {
+    font-size: 5rem;
+    cursor: pointer;
+}
+
+#score-card {
+    @extend .amber, .darken-1;
+
+    & p {
+        margin-top: .2rem;
+        margin-bottom: .2rem;
+        font-size: 1.5rem;
+        border-style: solid;
+        border-radius: 1rem;
+        @extend  .cyan-text, .text-accent-4,
+                 .black;
+     
+    }
+
+}
+
+#choice {
+    @extend .lime, .accent-3;
+
+    & #play-instructions {
+        margin-bottom: 2rem;
+    }
+    
+    & .material-icons{
+        display: block;
+        font-size: 2rem;
+        text-align: right;
+        padding: 0;
+    }
+
+    & p {
+        display: block;
+        font-size: 2rem;
+        font-weight: 500;
+        margin: auto;
+    }
+
+    & img {
+        height: 10rem;
+        cursor: pointer;
+        border-radius: 50%;
+    } 
+}
