@@ -8182,6 +8182,7 @@ input[type=range]::-ms-thumb {
   }
 }
 #game-title {
+  font-size: 3rem;
   border-style: solid;
   border-radius: 1rem;
   padding: 0.5rem;
@@ -8196,11 +8197,20 @@ input[type=range]::-ms-thumb {
   margin: 1rem;
 }
 
-#game-img {
+#game-img,
+#round-won,
+#round-lost,
+#round-tie {
   height: 20rem;
   -o-object-fit: contain;
      object-fit: contain;
   margin: auto;
+}
+
+#round-won,
+#round-lost,
+#round-tie {
+  display: none;
 }
 
 .material-icons {
@@ -8217,15 +8227,19 @@ input[type=range]::-ms-thumb {
 }
 
 #choice #play-instructions {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 #choice .material-icons {
-  display: inline-block;
+  display: block;
   font-size: 2rem;
 }
 #choice p {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: 3.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.2rem;
 }
 #choice img {
   height: 10rem;

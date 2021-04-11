@@ -13,8 +13,20 @@
     <body class="lime lighten-3">
       <h1 class="center" id="game-title">Rock Paper Scissors</h1>
       <div class="card sticky-action hoverable" id="game-card">
-        <div class="card-image waves-effect waves-block waves-light">
+        <div class="card-image waves-effect waves-block waves-light" id="start-rules">
           <img class="cyan lighten-3" src="img/rpsRules.png" id="game-img">
+        </div>
+        <div class="card-image green accent-3 center waves-effect waves-block waves-light" id="round-won">
+          <h2>Round Won!</h2>
+          <i class="material-icons large center">thumb_up</i>
+        </div>
+        <div class="card-image deep-orange accent-3 center waves-effect waves-block waves-light" id="round-lost">
+          <h2>Round Lost!</h2>
+          <i class="material-icons large center">thumb_down</i>
+        </div>
+        <div class="card-image purple accent-2 center waves-effect waves-block waves-light" id="round-tie">
+          <h2>Round Tied!</h2>
+          <i class="material-icons large center">thumbs_up_down</i>
         </div>
         <div class="card-content cyan darken-1">
           <h2>Play?<i class="material-icons right activator">play_circle_outline</i></h2>
@@ -26,9 +38,9 @@
         </div>
         <div class="card-reveal" id="choice">
           <div class="center">
-            <div class="col s12" id="play-instructions">
+            <div class="row" id="play-instructions">
               <i class="material-icons right activator">cancel</i>
-              <p>Make your choice</p>
+              <p>Make your choice:</p>
             </div>
             <img class="col m4 s4 hoverable activator"src="img/rock.png" alt="">
             <img class="col m4 s4 hoverable activator"src="img/paper.png" alt="">
