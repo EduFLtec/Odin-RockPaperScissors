@@ -1,5 +1,8 @@
 The Odin Project Foundations path PROJECT: ROCK PAPER SCISSORS
 
+View page demo at: https://edufltec.github.io/Odin-RockPaperScissors/rps.html
+
+
 Planning:
 Understand the Problem
 How do you play rock paper scissors against the computer in a browser console?
