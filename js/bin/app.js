@@ -1,12 +1,13 @@
 //UI variables
-const playBtn = document.querySelector("#start-play"),
-    playerBtnChoice = document.querySelectorAll(".playerBtn"),
+const playerBtnChoice = document.querySelectorAll(".playerBtn"),
     playerScore = document.querySelector("#player-score"),
     computerScore = document.querySelector("#cpu-score"),
     tieScore = document.querySelector("#tie-score");
 
 
 //Game variables
+let computerSelection = '';
+let playerSelection = '';
 let playerWin = 0,
     computerWin = 0,
     tie = 0,
@@ -14,16 +15,18 @@ let playerWin = 0,
     gameOver = false;
 
 
-//Start round with player selection
+//Player makes a choice
 playerBtnChoice.forEach(button => {
     button.addEventListener('click', () => {
-        const playerSelection = button.getAttribute('id');
+        playerSelection = button.getAttribute('id');
+        // Player's choice iniates the round
+        playRound();
     });
+});
 
-
-
-    //Generates the computer's selection
-    function playComputer() {
+function playRound () {
+    computerSelection = playComputer();
+function playComputer() {
         let getCompRandom = function getRandomInt() {
             let rand = Math.floor((Math.random() * 3) + 1);
             return rand;
@@ -38,19 +41,31 @@ playerBtnChoice.forEach(button => {
         }
         return compInput;
     }
-
-});
-
-
+    showRoundResults(playerSelection, computerSelection);
+}
 
 
-
-
-
+ // if (playerWin + computerWin + tie === 5)
+    //     gameOver = true;
+    // if (gameOver === true) {
+    //     //Compare and tally round results. Declare an overall game winner. 
+    //     function getGameResults() {
+    //         if (playerWin > computerWin) {
+    //             console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU are the CHAMPION!!!`);
+    //         } else if (computerWin > playerWin) {
+    //             console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU LOSE!!!`);
+    //         } else {
+    //             console.log(`You won ${playerWin}x and the computer won ${computerWin}x. It's a TIE!!!`);
+    //         }
+    //     }
+    //     return getGameResults();
+    // };
+    // //Print the results of each round
+    // return showRoundResults();
 
 
 //Determine the winner
-function showRoundResults() {
+function showRoundResults(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'rock') {
         tie++
         tieScore.textContent = `Ties: ${tie}`;
@@ -88,21 +103,6 @@ function showRoundResults() {
         tieScore.textContent = `Ties: ${tie}`;
         console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
     }
-    if (playerWin + computerWin + tie === 5)
-        gameOver = true;
-    if (gameOver === true) {
-        //Compare and tally round results. Declare an overall game winner. 
-        function getGameResults() {
-            if (playerWin > computerWin) {
-                console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU are the CHAMPION!!!`);
-            } else if (computerWin > playerWin) {
-                console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU LOSE!!!`);
-            } else {
-                console.log(`You won ${playerWin}x and the computer won ${computerWin}x. It's a TIE!!!`);
-            }
-        }
-        return getGameResults();
-    };
-    //Print the results of each round
-    return showRoundResults();
+   
 }
+
