@@ -2,7 +2,9 @@
 const playerBtnChoice = document.querySelectorAll(".playerBtn"),
     playerScore = document.querySelector("#player-score"),
     computerScore = document.querySelector("#cpu-score"),
-    tieScore = document.querySelector("#tie-score");
+    tieScore = document.querySelector("#tie-score"),
+    playBtnLabel = document.querySelector("#play-btn-label"),
+    playBtn = document.querySelector("#start-play");
 
 
 //Game variables
@@ -42,29 +44,11 @@ function playComputer() {
         return compInput;
     }
     showRoundResults(playerSelection, computerSelection);
+    isGameOver();
 }
 
 
- // if (playerWin + computerWin + tie === 5)
-    //     gameOver = true;
-    // if (gameOver === true) {
-    //     //Compare and tally round results. Declare an overall game winner. 
-    //     function getGameResults() {
-    //         if (playerWin > computerWin) {
-    //             console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU are the CHAMPION!!!`);
-    //         } else if (computerWin > playerWin) {
-    //             console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU LOSE!!!`);
-    //         } else {
-    //             console.log(`You won ${playerWin}x and the computer won ${computerWin}x. It's a TIE!!!`);
-    //         }
-    //     }
-    //     return getGameResults();
-    // };
-    // //Print the results of each round
-    // return showRoundResults();
-
-
-//Determine the winner
+//Determine round winner
 function showRoundResults(playerSelection, computerSelection) {
     if (playerSelection == 'rock' && computerSelection == 'rock') {
         tie++
@@ -105,4 +89,30 @@ function showRoundResults(playerSelection, computerSelection) {
     }
    
 }
+
+//Check call game after five rounds
+function isGameOver() {
+if (playerWin + computerWin + tie === 5){
+        gameOver = true;
+     };
+    if (gameOver === true) {
+        //Compare and tally round results. Declare an overall game winner. 
+        //End game and make page refresh available
+        function getGameResults() {
+            if (playerWin > computerWin) {
+                console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU are the CHAMPION!!!`);
+            } else if (computerWin > playerWin) {
+                console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU LOSE!!!`);
+            } else {
+                console.log(`You won ${playerWin}x and the computer won ${computerWin}x. It's a TIE!!!`);
+            }
+        }
+        getGameResults();
+        playBtnLabel.textContent = "Replay?";
+        playBtn.textContent = "replay";
+        playBtn.id = "replay";
+    };
+}
+
+
 
