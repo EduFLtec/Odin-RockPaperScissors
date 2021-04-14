@@ -1,10 +1,14 @@
 //UI variables
-const playerBtnChoice = document.querySelectorAll(".playerBtn"),
-    playerScore = document.querySelector("#player-score"),
-    computerScore = document.querySelector("#cpu-score"),
-    tieScore = document.querySelector("#tie-score"),
-    playBtnLabel = document.querySelector("#play-btn-label"),
-    playBtn = document.querySelector("#start-play");
+const startCard = document.querySelector('#start-rules'),
+    tieCard = document.querySelector('#round-tie'),
+    choiceCard = document.querySelector('#choice'),
+    cancelBtn = document.querySelector('#cancelBtn'),
+    playerBtnChoice = document.querySelectorAll('.playerBtn'),
+    playerScore = document.querySelector('#player-score'),
+    computerScore = document.querySelector('#cpu-score'),
+    tieScore = document.querySelector('#tie-score'),
+    playBtnLabel = document.querySelector('#play-btn-label'),
+    playBtn = document.querySelector('#start-play');
 
 
 //Game variables
@@ -20,10 +24,18 @@ let playerWin = 0,
 //Player makes a choice
 playerBtnChoice.forEach(button => {
     button.addEventListener('click', () => {
+        round++
         playerSelection = button.getAttribute('id');
-        // Player's choice iniates the round
+        //Player's choice iniates the round
         playRound();
+        //Re-hide Choice Card
+        choiceCard.removeAttribute('style');
     });
+});
+
+//Hide choice card
+cancelBtn.addEventListener('click',() =>{
+    choiceCard.removeAttribute('style');
 });
 
 function playRound () {
@@ -35,11 +47,11 @@ function playComputer() {
         };
         let compInput = getCompRandom();
         if (compInput == 1) {
-            compInput = "rock";
+            compInput = 'rock';
         } else if (compInput == 2) {
-            compInput = "paper";
+            compInput = 'paper';
         } else {
-            compInput = "scissors";
+            compInput = 'scissors';
         }
         return compInput;
     }
@@ -48,46 +60,29 @@ function playComputer() {
 }
 
 
-//Determine round winner
+//Determine round winner and display round results
 function showRoundResults(playerSelection, computerSelection) {
-    if (playerSelection == 'rock' && computerSelection == 'rock') {
+    startCard.style.display = 'none';
+    let para = document.createElement("p");
+    if ((playerSelection == 'rock' && computerSelection == 'rock') || (playerSelection == 'paper' && computerSelection == 'paper') || (playerSelection == 'scissors' && computerSelection == 'scissors')) {
         tie++
         tieScore.textContent = `Ties: ${tie}`;
+        tieCard.style.display = 'block';
+    //Test Case - Remove    
         console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
-    } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-        computerWin++
-        computerScore.textContent = `Computer: ${computerWin}`;
-        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
-    } else if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        playerWin++
-        playerScore.textContent = `Player: ${playerWin}`;
-        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`);
-    } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        playerWin++
-        playerScore.textContent = `Player: ${playerWin}`;
-        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`);
-    } else if (playerSelection == 'paper' && computerSelection == 'paper') {
-        tie++
-        tieScore.textContent = `Ties: ${tie}`;
-        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
-    } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-        computerWin++
-        computerScore.textContent = `Computer: ${computerWin}`;
-        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
-    } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-        computerWin++
-        computerScore.textContent = `Computer: ${computerWin}`;
-        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
-    } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
+    //Add Round Status Text
+        // let tieText = document.createTextNode(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
+        // para.appendChild(tieText);
+        // tieCard.appendChild(para);
+    } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') ||(playerSelection == 'scissors' && computerSelection == 'paper')) {
         playerWin++
         playerScore.textContent = `Player: ${playerWin}`;
         console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`);
     } else {
-        tie++
-        tieScore.textContent = `Ties: ${tie}`;
-        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
+        computerWin++
+        computerScore.textContent = `Computer: ${computerWin}`;
+        console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
     }
-   
 }
 
 //Check call game after five rounds
@@ -96,7 +91,7 @@ if (playerWin + computerWin + tie === 5){
         gameOver = true;
      };
     if (gameOver === true) {
-        //Compare and tally round results. Declare an overall game winner. 
+        //Compare and tally round results. Display game results. 
         //End game and make page refresh available
         function getGameResults() {
             if (playerWin > computerWin) {
@@ -108,11 +103,14 @@ if (playerWin + computerWin + tie === 5){
             }
         }
         getGameResults();
+        //Change play menu to replay option
         playBtnLabel.textContent = "Replay?";
         playBtn.textContent = "replay";
-        playBtn.id = "replay";
+        playBtn.id = 'replay';
     };
 }
+
+//Event listener to replay and reload page
 
 
 
