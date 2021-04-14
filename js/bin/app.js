@@ -1,6 +1,8 @@
 //UI variables
 const startCard = document.querySelector('#start-rules'),
     tieCard = document.querySelector('#round-tie'),
+    winCard = document.querySelector('#round-won'),
+    lossCard = document.querySelector('#round-lost'),
     choiceCard = document.querySelector('#choice'),
     cancelBtn = document.querySelector('#cancelBtn'),
     playerBtnChoice = document.querySelectorAll('.playerBtn'),
@@ -8,6 +10,9 @@ const startCard = document.querySelector('#start-rules'),
     computerScore = document.querySelector('#cpu-score'),
     tieScore = document.querySelector('#tie-score'),
     playBtnLabel = document.querySelector('#play-btn-label'),
+    tieRoundResult = document.querySelector('#tie-result'),
+    winRoundResult = document.querySelector('#win-result'),
+    lossRoundResult = document.querySelector('#loss-result'),
     playBtn = document.querySelector('#start-play');
 
 
@@ -63,25 +68,27 @@ function playComputer() {
 //Determine round winner and display round results
 function showRoundResults(playerSelection, computerSelection) {
     startCard.style.display = 'none';
-    let para = document.createElement("p");
+    winCard.style.display = 'none';
+    lossCard.style.display = 'none';
+    tieCard.style.display = 'none';
     if ((playerSelection == 'rock' && computerSelection == 'rock') || (playerSelection == 'paper' && computerSelection == 'paper') || (playerSelection == 'scissors' && computerSelection == 'scissors')) {
         tie++
         tieScore.textContent = `Ties: ${tie}`;
         tieCard.style.display = 'block';
-    //Test Case - Remove    
         console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
-    //Add Round Status Text
-        // let tieText = document.createTextNode(`You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`);
-        // para.appendChild(tieText);
-        // tieCard.appendChild(para);
+        tieRoundResult.textContent = `You threw ${playerSelection} and the computer threw ${computerSelection}. It's a tie round!`;
     } else if ((playerSelection == 'rock' && computerSelection == 'scissors') || (playerSelection == 'paper' && computerSelection == 'rock') ||(playerSelection == 'scissors' && computerSelection == 'paper')) {
         playerWin++
         playerScore.textContent = `Player: ${playerWin}`;
+        winCard.style.display = 'block';
         console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`);
+        winRoundResult.textContent = `You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`;
     } else {
         computerWin++
         computerScore.textContent = `Computer: ${computerWin}`;
+        lossCard.style.display = 'block';
         console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
+        lossRoundResult.textContent = `You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`;
     }
 }
 

@@ -1,63 +1,73 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <link rel="shortcut icon" type="image/x-icon" href="img/favi.ico">
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Rock Paper Scissors</title>
-    </head>     
-    <body>
-      <h1 class="center" id="game-title">Rock Paper Scissors</h1>
-      <div class="card sticky-action hoverable" id="game-card">
-        <div class="card-image waves-effect waves-block waves-light" id="start-rules">
-          <img src="img/rpsRules.png" id="game-start" alt="rock paper scissors game rules">
-        </div>
-        <div class="card-image center waves-effect waves-block waves-light" id="round-won">
-          <h2>Round Won!</h2>
-          <i class="material-icons large center">thumb_up</i>
-        </div>
-        <div class="card-image center waves-effect waves-block waves-light" id="round-lost">
-          <h2>Round Lost!</h2>
-          <i class="material-icons large center">thumb_down</i>
-        </div>
-        <div class="card-image center waves-effect waves-block waves-light" id="round-tie">
-          <h2>Round Tied!</h2>
-          <i class="material-icons large center">thumbs_up_down</i>
-        </div>
-        <div class="card-image waves-effect waves-block waves-light" id="game-win">
-          <img src="img/win.png" alt="You win!">
-        </div>
-        <div class="card-image waves-effect waves-block waves-light" id="game-lost">
-          <img src="img/lose.png" alt="You lose!">
-        </div>
-        <div class="card-content cyan darken-1">
-          <i class="material-icons activator right" id="start-play">play_circle_outline</i>
-          <h2 id="play-btn-label">Play?</h2>
-        </div>
-        <div class="card-action row" id="score-card">
-          <p class="col m4 s12" id="player-score">Player: </p>
-          <p class="col m4 s12" id="cpu-score">Computer: </p>
-          <p class="col m4 s12" id="tie-score">Ties: </p>
-        </div>
-        <div class="card-reveal" id="choice">
-          <div class="center">
-            <div class="row" id="play-instructions">
-              <i class="col s12 material-icons" id="cancelBtn">cancel</i>
-              <p>Make your choice:</p>
-            </div>
-            <img class="col m4 s4 hoverable playerBtn" value="rock" src="img/rock.png" alt="rock hand gesture" id="rock">
-            <img class="col m4 s4 hoverable playerBtn" value="paper" src="img/paper.png" alt="paper hand gesture" id="paper">
-            <img class="col m4 s4 hoverable playerBtn" value="scissors" src="img/scissors.png" alt="scissors hand gesture" id="scissors">
-          </div>
-        </div>
+<html>
 
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="img/favi.ico">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+  <h1 class="center" id="game-title">Rock Paper Scissors</h1>
+  <div class="card sticky-action hoverable" id="game-card">
+    <div class="card-image waves-effect waves-block waves-light" id="start-rules">
+      <img src="img/rpsRules.png" id="game-start" alt="rock paper scissors game rules">
+    </div>
+    <div class="card-image center waves-effect waves-block waves-light activator" id="round-won">
+      <h2>Round Won!</h2>
+      <i class="material-icons large center">thumb_up</i>
+      <p>Touch here or press the play button for the next round.</p>
+      <p class="round-result" id="win-result"></p>
+    </div>
+    <div class="card-image center waves-effect waves-block waves-light activator" id="round-lost">
+      <h2>Round Lost!</h2>
+      <i class="material-icons large center">thumb_down</i>
+      <p>Touch here or press the play button for the next round.</p>
+      <p class="round-result" id="loss-result"></p>
+    </div>
+    <div class="card-image center waves-effect waves-block waves-light activator" id="round-tie">
+      <h2>Round Tied!</h2>
+      <i class="material-icons large center">thumbs_up_down</i>
+      <p>Touch here or press the play button for the next round.</p>
+      <p class="round-result" id="tie-result"></p>
+    </div>
+    <div class="card-image waves-effect waves-block waves-light" id="game-win">
+      <img src="img/win.png" alt="You win!">
+    </div>
+    <div class="card-image waves-effect waves-block waves-light" id="game-lost">
+      <img src="img/lose.png" alt="You lose!">
+    </div>
+    <div class="card-content cyan darken-1">
+      <i class="material-icons activator right" id="start-play">play_circle_outline</i>
+      <h2 id="play-btn-label">Play?</h2>
+    </div>
+    <div class="card-action row" id="score-card">
+      <p class="col m4 s12" id="player-score">Player: </p>
+      <p class="col m4 s12" id="cpu-score">Computer: </p>
+      <p class="col m4 s12" id="tie-score">Ties: </p>
+    </div>
+    <div class="card-reveal" id="choice">
+      <div class="center">
+        <div class="row" id="play-instructions">
+          <i class="col s12 material-icons" id="cancelBtn">cancel</i>
+          <p>Make your choice:</p>
+        </div>
+        <img class="col m4 s4 hoverable playerBtn" value="rock" src="img/rock.png" alt="rock hand gesture" id="rock">
+        <img class="col m4 s4 hoverable playerBtn" value="paper" src="img/paper.png" alt="paper hand gesture"
+          id="paper">
+        <img class="col m4 s4 hoverable playerBtn" value="scissors" src="img/scissors.png" alt="scissors hand gesture"
+          id="scissors">
       </div>
-      <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/bin/materialize.js"></script>
-      <script type="text/javascript" src="js/bin/app.js"></script>
-    </body>
-  </html>
+    </div>
+  </div>
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/bin/materialize.js"></script>
+  <script type="text/javascript" src="js/bin/app.js"></script>
+</body>
+
+</html>
