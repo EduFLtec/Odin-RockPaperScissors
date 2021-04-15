@@ -91,7 +91,7 @@ function showRoundResults(playerSelection, computerSelection) {
         computerScore.textContent = `Computer: ${computerWin}`;
         lossCard.style.display = 'block';
         console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
-        lossRoundResult.textContent = `You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`;
+        lossRoundResult.textContent = `You threw ${playerSelection} and the computer threw ${computerSelection}. You lose this round!`;
     }
 //Disable round play after five round game
     if (playerWin + computerWin + tie === 5){
