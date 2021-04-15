@@ -4,6 +4,10 @@ body {
     @extend .lime, .lighten-3;
 }
 
+.row {
+    margin-bottom: 0;
+}
+
 #game-title {
     font-size: 3rem;
     border-style: solid;
@@ -30,11 +34,12 @@ body {
         @extend .deep-orange, .accent-3;
     }
 
-    & #round-tie {
+    & #round-tie,
+      #game-tied {
         @extend .purple, .accent-2;
     }
 
-    & #game-win {
+    & #game-won {
         @extend .cyan, .lighten-3;
     }
 
@@ -43,11 +48,12 @@ body {
     }
 
     & #game-start,
+        #win-img,
+        #lost-img,
+        #game-tied,
         #round-won,
         #round-lost,
-        #round-tie,
-        #game-win,
-        #game-lost {
+        #round-tie {
             height: 20rem;
             object-fit: contain;
             margin: auto;
@@ -56,11 +62,25 @@ body {
     & #round-won,
         #round-lost,
         #round-tie,
-        #game-win,
-        #game-lost {
+        #game-won,
+        #game-lost,
+        #game-tied {
             display: none;
         }
 
+
+    & #game-tied {
+        text-align: center;
+    }
+
+    & #start-play{
+        margin-top: 1.8rem;
+    }
+
+    & .round-result{
+        font-size: 1.3rem;
+        padding: .5rem;
+    }
 }
 
 .material-icons {

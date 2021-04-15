@@ -23,7 +23,7 @@
   color: #f8c1c3 !important;
 }
 
-.materialize-red.lighten-3, #game-card .materialize-red#game-win, #game-card .materialize-red#game-start, body.materialize-red {
+.materialize-red.lighten-3, #game-card .materialize-red#game-won, #game-card .materialize-red#game-start, body.materialize-red {
   background-color: #f3989b !important;
 }
 
@@ -103,7 +103,7 @@
   color: #FFCDD2 !important;
 }
 
-.red.lighten-3, #game-card .red#game-win, #game-card .red#game-start, body.red {
+.red.lighten-3, #game-card .red#game-won, #game-card .red#game-start, body.red {
   background-color: #EF9A9A !important;
 }
 
@@ -167,7 +167,8 @@
   color: #FF8A80 !important;
 }
 
-.red.accent-2, #game-card .red#round-tie {
+.red.accent-2, #game-card .red#round-tie,
+#game-card .red#game-tied {
   background-color: #FF5252 !important;
 }
 
@@ -215,7 +216,7 @@
   color: #f8bbd0 !important;
 }
 
-.pink.lighten-3, #game-card .pink#game-win, #game-card .pink#game-start, body.pink {
+.pink.lighten-3, #game-card .pink#game-won, #game-card .pink#game-start, body.pink {
   background-color: #f48fb1 !important;
 }
 
@@ -279,7 +280,8 @@
   color: #ff80ab !important;
 }
 
-.pink.accent-2, #game-card .pink#round-tie {
+.pink.accent-2, #game-card .pink#round-tie,
+#game-card .pink#game-tied {
   background-color: #ff4081 !important;
 }
 
@@ -303,7 +305,8 @@
   color: #c51162 !important;
 }
 
-.purple, #game-card #round-tie {
+.purple, #game-card #round-tie,
+#game-card #game-tied {
   background-color: #9c27b0 !important;
 }
 
@@ -311,7 +314,8 @@
   color: #9c27b0 !important;
 }
 
-.purple.lighten-5, #game-card .lighten-5#round-tie {
+.purple.lighten-5, #game-card .lighten-5#round-tie,
+#game-card .lighten-5#game-tied {
   background-color: #f3e5f5 !important;
 }
 
@@ -319,7 +323,8 @@
   color: #f3e5f5 !important;
 }
 
-.purple.lighten-4, #game-card .lighten-4#round-tie {
+.purple.lighten-4, #game-card .lighten-4#round-tie,
+#game-card .lighten-4#game-tied {
   background-color: #e1bee7 !important;
 }
 
@@ -327,7 +332,9 @@
   color: #e1bee7 !important;
 }
 
-.purple.lighten-3, #game-card .purple#game-win, #game-card .lighten-3#round-tie, #game-card .purple#game-start, body.purple, #game-card body#round-tie {
+.purple.lighten-3, #game-card .purple#game-won, #game-card .lighten-3#round-tie,
+#game-card .lighten-3#game-tied, #game-card .purple#game-start, body.purple, #game-card body#round-tie,
+#game-card body#game-tied {
   background-color: #ce93d8 !important;
 }
 
@@ -335,7 +342,8 @@
   color: #ce93d8 !important;
 }
 
-.purple.lighten-2, #game-card .lighten-2#round-tie {
+.purple.lighten-2, #game-card .lighten-2#round-tie,
+#game-card .lighten-2#game-tied {
   background-color: #ba68c8 !important;
 }
 
@@ -343,7 +351,8 @@
   color: #ba68c8 !important;
 }
 
-.purple.lighten-1, #game-card .lighten-1#round-tie {
+.purple.lighten-1, #game-card .lighten-1#round-tie,
+#game-card .lighten-1#game-tied {
   background-color: #ab47bc !important;
 }
 
@@ -351,7 +360,8 @@
   color: #ab47bc !important;
 }
 
-.purple.darken-1, .purple#score-card, #game-card .darken-1#round-tie, .purple#game-title {
+.purple.darken-1, .purple#score-card, #game-card .darken-1#round-tie,
+#game-card .darken-1#game-tied, .purple#game-title {
   background-color: #8e24aa !important;
 }
 
@@ -359,7 +369,8 @@
   color: #8e24aa !important;
 }
 
-.purple.darken-2, #game-card .darken-2#round-tie {
+.purple.darken-2, #game-card .darken-2#round-tie,
+#game-card .darken-2#game-tied {
   background-color: #7b1fa2 !important;
 }
 
@@ -367,7 +378,8 @@
   color: #7b1fa2 !important;
 }
 
-.purple.darken-3, #game-card .darken-3#round-tie {
+.purple.darken-3, #game-card .darken-3#round-tie,
+#game-card .darken-3#game-tied {
   background-color: #6a1b9a !important;
 }
 
@@ -375,7 +387,8 @@
   color: #6a1b9a !important;
 }
 
-.purple.darken-4, #game-card .darken-4#round-tie {
+.purple.darken-4, #game-card .darken-4#round-tie,
+#game-card .darken-4#game-tied {
   background-color: #4a148c !important;
 }
 
@@ -383,7 +396,8 @@
   color: #4a148c !important;
 }
 
-.purple.accent-1, #game-card .accent-1#round-tie {
+.purple.accent-1, #game-card .accent-1#round-tie,
+#game-card .accent-1#game-tied {
   background-color: #ea80fc !important;
 }
 
@@ -391,7 +405,8 @@
   color: #ea80fc !important;
 }
 
-.purple.accent-2, #game-card #round-tie {
+.purple.accent-2, #game-card #round-tie,
+#game-card #game-tied {
   background-color: #e040fb !important;
 }
 
@@ -399,7 +414,8 @@
   color: #e040fb !important;
 }
 
-.purple.accent-3, .purple#choice, #game-card .purple#game-lost, #game-card .accent-3#round-tie, #game-card .purple#round-lost, #game-card .purple#round-won {
+.purple.accent-3, .purple#choice, #game-card .purple#game-lost, #game-card .accent-3#round-tie,
+#game-card .accent-3#game-tied, #game-card .purple#round-lost, #game-card .purple#round-won {
   background-color: #d500f9 !important;
 }
 
@@ -407,7 +423,8 @@
   color: #d500f9 !important;
 }
 
-.purple.accent-4, #game-card .accent-4#round-tie {
+.purple.accent-4, #game-card .accent-4#round-tie,
+#game-card .accent-4#game-tied {
   background-color: #aa00ff !important;
 }
 
@@ -439,7 +456,7 @@
   color: #d1c4e9 !important;
 }
 
-.deep-purple.lighten-3, #game-card .deep-purple#game-win, #game-card .deep-purple#game-start, body.deep-purple {
+.deep-purple.lighten-3, #game-card .deep-purple#game-won, #game-card .deep-purple#game-start, body.deep-purple {
   background-color: #b39ddb !important;
 }
 
@@ -503,7 +520,8 @@
   color: #b388ff !important;
 }
 
-.deep-purple.accent-2, #game-card .deep-purple#round-tie {
+.deep-purple.accent-2, #game-card .deep-purple#round-tie,
+#game-card .deep-purple#game-tied {
   background-color: #7c4dff !important;
 }
 
@@ -551,7 +569,7 @@
   color: #c5cae9 !important;
 }
 
-.indigo.lighten-3, #game-card .indigo#game-win, #game-card .indigo#game-start, body.indigo {
+.indigo.lighten-3, #game-card .indigo#game-won, #game-card .indigo#game-start, body.indigo {
   background-color: #9fa8da !important;
 }
 
@@ -615,7 +633,8 @@
   color: #8c9eff !important;
 }
 
-.indigo.accent-2, #game-card .indigo#round-tie {
+.indigo.accent-2, #game-card .indigo#round-tie,
+#game-card .indigo#game-tied {
   background-color: #536dfe !important;
 }
 
@@ -663,7 +682,7 @@
   color: #BBDEFB !important;
 }
 
-.blue.lighten-3, #game-card .blue#game-win, #game-card .blue#game-start, body.blue {
+.blue.lighten-3, #game-card .blue#game-won, #game-card .blue#game-start, body.blue {
   background-color: #90CAF9 !important;
 }
 
@@ -727,7 +746,8 @@
   color: #82B1FF !important;
 }
 
-.blue.accent-2, #game-card .blue#round-tie {
+.blue.accent-2, #game-card .blue#round-tie,
+#game-card .blue#game-tied {
   background-color: #448AFF !important;
 }
 
@@ -775,7 +795,7 @@
   color: #b3e5fc !important;
 }
 
-.light-blue.lighten-3, #game-card .light-blue#game-win, #game-card .light-blue#game-start, body.light-blue {
+.light-blue.lighten-3, #game-card .light-blue#game-won, #game-card .light-blue#game-start, body.light-blue {
   background-color: #81d4fa !important;
 }
 
@@ -839,7 +859,8 @@
   color: #80d8ff !important;
 }
 
-.light-blue.accent-2, #game-card .light-blue#round-tie {
+.light-blue.accent-2, #game-card .light-blue#round-tie,
+#game-card .light-blue#game-tied {
   background-color: #40c4ff !important;
 }
 
@@ -863,7 +884,7 @@
   color: #0091ea !important;
 }
 
-.cyan, #game-card #game-win, #game-card #game-start, #game-title {
+.cyan, #game-card #game-won, #game-card #game-start, #game-title {
   background-color: #00bcd4 !important;
 }
 
@@ -871,7 +892,7 @@
   color: #00bcd4 !important;
 }
 
-.cyan.lighten-5, #game-card .lighten-5#game-win, #game-card .lighten-5#game-start, .lighten-5#game-title {
+.cyan.lighten-5, #game-card .lighten-5#game-won, #game-card .lighten-5#game-start, .lighten-5#game-title {
   background-color: #e0f7fa !important;
 }
 
@@ -879,7 +900,7 @@
   color: #e0f7fa !important;
 }
 
-.cyan.lighten-4, #game-card .lighten-4#game-win, #game-card .lighten-4#game-start, .lighten-4#game-title {
+.cyan.lighten-4, #game-card .lighten-4#game-won, #game-card .lighten-4#game-start, .lighten-4#game-title {
   background-color: #b2ebf2 !important;
 }
 
@@ -887,7 +908,7 @@
   color: #b2ebf2 !important;
 }
 
-.cyan.lighten-3, #game-card #game-win, #game-card #game-start, .lighten-3#game-title, body.cyan, body#game-title {
+.cyan.lighten-3, #game-card #game-won, #game-card #game-start, .lighten-3#game-title, body.cyan, body#game-title {
   background-color: #80deea !important;
 }
 
@@ -895,7 +916,7 @@
   color: #80deea !important;
 }
 
-.cyan.lighten-2, #game-card .lighten-2#game-win, #game-card .lighten-2#game-start, .lighten-2#game-title {
+.cyan.lighten-2, #game-card .lighten-2#game-won, #game-card .lighten-2#game-start, .lighten-2#game-title {
   background-color: #4dd0e1 !important;
 }
 
@@ -903,7 +924,7 @@
   color: #4dd0e1 !important;
 }
 
-.cyan.lighten-1, #game-card .lighten-1#game-win, #game-card .lighten-1#game-start, .lighten-1#game-title {
+.cyan.lighten-1, #game-card .lighten-1#game-won, #game-card .lighten-1#game-start, .lighten-1#game-title {
   background-color: #26c6da !important;
 }
 
@@ -911,7 +932,7 @@
   color: #26c6da !important;
 }
 
-.cyan.darken-1, .cyan#score-card, #game-card .darken-1#game-win, #game-card .darken-1#game-start, #game-title {
+.cyan.darken-1, .cyan#score-card, #game-card .darken-1#game-won, #game-card .darken-1#game-start, #game-title {
   background-color: #00acc1 !important;
 }
 
@@ -919,7 +940,7 @@
   color: #00acc1 !important;
 }
 
-.cyan.darken-2, #game-card .darken-2#game-win, #game-card .darken-2#game-start, .darken-2#game-title {
+.cyan.darken-2, #game-card .darken-2#game-won, #game-card .darken-2#game-start, .darken-2#game-title {
   background-color: #0097a7 !important;
 }
 
@@ -927,7 +948,7 @@
   color: #0097a7 !important;
 }
 
-.cyan.darken-3, #game-card .darken-3#game-win, #game-card .darken-3#game-start, .darken-3#game-title {
+.cyan.darken-3, #game-card .darken-3#game-won, #game-card .darken-3#game-start, .darken-3#game-title {
   background-color: #00838f !important;
 }
 
@@ -935,7 +956,7 @@
   color: #00838f !important;
 }
 
-.cyan.darken-4, #game-card .darken-4#game-win, #game-card .darken-4#game-start, .darken-4#game-title {
+.cyan.darken-4, #game-card .darken-4#game-won, #game-card .darken-4#game-start, .darken-4#game-title {
   background-color: #006064 !important;
 }
 
@@ -943,7 +964,7 @@
   color: #006064 !important;
 }
 
-.cyan.accent-1, #game-card .accent-1#game-win, #game-card .accent-1#game-start, .accent-1#game-title {
+.cyan.accent-1, #game-card .accent-1#game-won, #game-card .accent-1#game-start, .accent-1#game-title {
   background-color: #84ffff !important;
 }
 
@@ -951,7 +972,8 @@
   color: #84ffff !important;
 }
 
-.cyan.accent-2, #game-card .accent-2#game-win, #game-card .cyan#round-tie, #game-card .accent-2#game-start, .accent-2#game-title {
+.cyan.accent-2, #game-card .accent-2#game-won, #game-card .cyan#round-tie,
+#game-card .cyan#game-tied, #game-card .accent-2#game-start, .accent-2#game-title {
   background-color: #18ffff !important;
 }
 
@@ -959,7 +981,7 @@
   color: #18ffff !important;
 }
 
-.cyan.accent-3, .cyan#choice, #game-card .cyan#game-lost, #game-card .accent-3#game-win, #game-card .cyan#round-lost, #game-card .cyan#round-won, #game-card .accent-3#game-start, .accent-3#game-title {
+.cyan.accent-3, .cyan#choice, #game-card .cyan#game-lost, #game-card .accent-3#game-won, #game-card .cyan#round-lost, #game-card .cyan#round-won, #game-card .accent-3#game-start, .accent-3#game-title {
   background-color: #00e5ff !important;
 }
 
@@ -967,7 +989,7 @@
   color: #00e5ff !important;
 }
 
-.cyan.accent-4, #game-card .accent-4#game-win, #game-card .accent-4#game-start, .accent-4#game-title {
+.cyan.accent-4, #game-card .accent-4#game-won, #game-card .accent-4#game-start, .accent-4#game-title {
   background-color: #00b8d4 !important;
 }
 
@@ -999,7 +1021,7 @@
   color: #b2dfdb !important;
 }
 
-.teal.lighten-3, #game-card .teal#game-win, #game-card .teal#game-start, body.teal {
+.teal.lighten-3, #game-card .teal#game-won, #game-card .teal#game-start, body.teal {
   background-color: #80cbc4 !important;
 }
 
@@ -1063,7 +1085,8 @@
   color: #a7ffeb !important;
 }
 
-.teal.accent-2, #game-card .teal#round-tie {
+.teal.accent-2, #game-card .teal#round-tie,
+#game-card .teal#game-tied {
   background-color: #64ffda !important;
 }
 
@@ -1111,7 +1134,7 @@
   color: #C8E6C9 !important;
 }
 
-.green.lighten-3, #game-card .green#game-win, #game-card .lighten-3#round-won, #game-card .green#game-start, body.green, #game-card body#round-won {
+.green.lighten-3, #game-card .green#game-won, #game-card .lighten-3#round-won, #game-card .green#game-start, body.green, #game-card body#round-won {
   background-color: #A5D6A7 !important;
 }
 
@@ -1175,7 +1198,8 @@
   color: #B9F6CA !important;
 }
 
-.green.accent-2, #game-card .green#round-tie, #game-card .accent-2#round-won {
+.green.accent-2, #game-card .green#round-tie,
+#game-card .green#game-tied, #game-card .accent-2#round-won {
   background-color: #69F0AE !important;
 }
 
@@ -1223,7 +1247,7 @@
   color: #dcedc8 !important;
 }
 
-.light-green.lighten-3, #game-card .light-green#game-win, #game-card .light-green#game-start, body.light-green {
+.light-green.lighten-3, #game-card .light-green#game-won, #game-card .light-green#game-start, body.light-green {
   background-color: #c5e1a5 !important;
 }
 
@@ -1287,7 +1311,8 @@
   color: #ccff90 !important;
 }
 
-.light-green.accent-2, #game-card .light-green#round-tie {
+.light-green.accent-2, #game-card .light-green#round-tie,
+#game-card .light-green#game-tied {
   background-color: #b2ff59 !important;
 }
 
@@ -1335,7 +1360,7 @@
   color: #f0f4c3 !important;
 }
 
-.lime.lighten-3, .lighten-3#choice, #game-card .lime#game-win, #game-card .lime#game-start, body {
+.lime.lighten-3, .lighten-3#choice, #game-card .lime#game-won, #game-card .lime#game-start, body {
   background-color: #e6ee9c !important;
 }
 
@@ -1399,7 +1424,9 @@
   color: #f4ff81 !important;
 }
 
-.lime.accent-2, .accent-2#choice, #game-card .lime#round-tie, body.accent-2, #game-card body#round-tie {
+.lime.accent-2, .accent-2#choice, #game-card .lime#round-tie,
+#game-card .lime#game-tied, body.accent-2, #game-card body#round-tie,
+#game-card body#game-tied {
   background-color: #eeff41 !important;
 }
 
@@ -1447,7 +1474,7 @@
   color: #fff9c4 !important;
 }
 
-.yellow.lighten-3, #game-card .yellow#game-win, #game-card .yellow#game-start, body.yellow {
+.yellow.lighten-3, #game-card .yellow#game-won, #game-card .yellow#game-start, body.yellow {
   background-color: #fff59d !important;
 }
 
@@ -1511,7 +1538,8 @@
   color: #ffff8d !important;
 }
 
-.yellow.accent-2, #game-card .yellow#round-tie {
+.yellow.accent-2, #game-card .yellow#round-tie,
+#game-card .yellow#game-tied {
   background-color: #ffff00 !important;
 }
 
@@ -1559,7 +1587,7 @@
   color: #ffecb3 !important;
 }
 
-.amber.lighten-3, .lighten-3#score-card, #game-card .amber#game-win, #game-card .amber#game-start, body.amber, body#score-card {
+.amber.lighten-3, .lighten-3#score-card, #game-card .amber#game-won, #game-card .amber#game-start, body.amber, body#score-card {
   background-color: #ffe082 !important;
 }
 
@@ -1623,7 +1651,8 @@
   color: #ffe57f !important;
 }
 
-.amber.accent-2, .accent-2#score-card, #game-card .amber#round-tie {
+.amber.accent-2, .accent-2#score-card, #game-card .amber#round-tie,
+#game-card .amber#game-tied {
   background-color: #ffd740 !important;
 }
 
@@ -1671,7 +1700,7 @@
   color: #ffe0b2 !important;
 }
 
-.orange.lighten-3, #game-card .lighten-3#game-lost, #game-card .orange#game-win, #game-card .orange#game-start, body.orange, #game-card body#game-lost {
+.orange.lighten-3, #game-card .lighten-3#game-lost, #game-card .orange#game-won, #game-card .orange#game-start, body.orange, #game-card body#game-lost {
   background-color: #ffcc80 !important;
 }
 
@@ -1735,7 +1764,8 @@
   color: #ffd180 !important;
 }
 
-.orange.accent-2, #game-card .accent-2#game-lost, #game-card .orange#round-tie {
+.orange.accent-2, #game-card .accent-2#game-lost, #game-card .orange#round-tie,
+#game-card .orange#game-tied {
   background-color: #ffab40 !important;
 }
 
@@ -1783,7 +1813,7 @@
   color: #ffccbc !important;
 }
 
-.deep-orange.lighten-3, #game-card .deep-orange#game-win, #game-card .lighten-3#round-lost, #game-card .deep-orange#game-start, body.deep-orange, #game-card body#round-lost {
+.deep-orange.lighten-3, #game-card .deep-orange#game-won, #game-card .lighten-3#round-lost, #game-card .deep-orange#game-start, body.deep-orange, #game-card body#round-lost {
   background-color: #ffab91 !important;
 }
 
@@ -1847,7 +1877,8 @@
   color: #ff9e80 !important;
 }
 
-.deep-orange.accent-2, #game-card .deep-orange#round-tie, #game-card .accent-2#round-lost {
+.deep-orange.accent-2, #game-card .deep-orange#round-tie,
+#game-card .deep-orange#game-tied, #game-card .accent-2#round-lost {
   background-color: #ff6e40 !important;
 }
 
@@ -1895,7 +1926,7 @@
   color: #d7ccc8 !important;
 }
 
-.brown.lighten-3, #game-card .brown#game-win, #game-card .brown#game-start, body.brown {
+.brown.lighten-3, #game-card .brown#game-won, #game-card .brown#game-start, body.brown {
   background-color: #bcaaa4 !important;
 }
 
@@ -1975,7 +2006,7 @@
   color: #cfd8dc !important;
 }
 
-.blue-grey.lighten-3, #game-card .blue-grey#game-win, #game-card .blue-grey#game-start, body.blue-grey {
+.blue-grey.lighten-3, #game-card .blue-grey#game-won, #game-card .blue-grey#game-start, body.blue-grey {
   background-color: #b0bec5 !important;
 }
 
@@ -2055,7 +2086,7 @@
   color: #f5f5f5 !important;
 }
 
-.grey.lighten-3, #game-card .grey#game-win, #game-card .grey#game-start, body.grey {
+.grey.lighten-3, #game-card .grey#game-won, #game-card .grey#game-start, body.grey {
   background-color: #eeeeee !important;
 }
 
@@ -8181,6 +8212,10 @@ input[type=range]::-ms-thumb {
     margin-top: 1.2rem;
   }
 }
+.row {
+  margin-bottom: 0;
+}
+
 #game-title {
   font-size: 3rem;
   border-style: solid;
@@ -8197,11 +8232,12 @@ input[type=range]::-ms-thumb {
   margin: 1rem;
 }
 #game-card #game-start,
+#game-card #win-img,
+#game-card #lost-img,
+#game-card #game-tied,
 #game-card #round-won,
 #game-card #round-lost,
-#game-card #round-tie,
-#game-card #game-win,
-#game-card #game-lost {
+#game-card #round-tie {
   height: 20rem;
   -o-object-fit: contain;
      object-fit: contain;
@@ -8210,9 +8246,20 @@ input[type=range]::-ms-thumb {
 #game-card #round-won,
 #game-card #round-lost,
 #game-card #round-tie,
-#game-card #game-win,
-#game-card #game-lost {
+#game-card #game-won,
+#game-card #game-lost,
+#game-card #game-tied {
   display: none;
+}
+#game-card #game-tied {
+  text-align: center;
+}
+#game-card #start-play {
+  margin-top: 1.8rem;
+}
+#game-card .round-result {
+  font-size: 1.3rem;
+  padding: 0.5rem;
 }
 
 .material-icons {

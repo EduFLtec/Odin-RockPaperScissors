@@ -13,8 +13,11 @@ const startCard = document.querySelector('#start-rules'),
     tieRoundResult = document.querySelector('#tie-result'),
     winRoundResult = document.querySelector('#win-result'),
     lossRoundResult = document.querySelector('#loss-result'),
-    playBtn = document.querySelector('#start-play');
-
+    playBtn = document.querySelector('#start-play'),
+    gameOverWin = document.querySelector('#game-won'),
+    gameOverLoss = document.querySelector('#game-lost'),
+    gameOverTie = document.querySelector('#game-tied');
+    
 
 //Game variables
 let computerSelection = '';
@@ -90,34 +93,49 @@ function showRoundResults(playerSelection, computerSelection) {
         console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
         lossRoundResult.textContent = `You threw ${playerSelection} and the computer threw ${computerSelection}. You win this round!`;
     }
-}
-
-//Check call game after five rounds
-function isGameOver() {
-if (playerWin + computerWin + tie === 5){
-        gameOver = true;
+//Disable round play after five round game
+    if (playerWin + computerWin + tie === 5){
+        winCard.classList.remove('activator');
+        lossCard.classList.remove('activator');
+        tieCard.classList.remove('activator');
+        playBtn.style.display = 'none';
+        isGameOver();
      };
-    if (gameOver === true) {
-        //Compare and tally round results. Display game results. 
-        //End game and make page refresh available
-        function getGameResults() {
-            if (playerWin > computerWin) {
-                console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU are the CHAMPION!!!`);
-            } else if (computerWin > playerWin) {
-                console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU LOSE!!!`);
-            } else {
-                console.log(`You won ${playerWin}x and the computer won ${computerWin}x. It's a TIE!!!`);
-            }
-        }
-        getGameResults();
-        //Change play menu to replay option
-        playBtnLabel.textContent = "Replay?";
-        playBtn.textContent = "replay";
-        playBtn.id = 'replay';
-    };
 }
 
-//Event listener to replay and reload page
+//End game. Clear round result screen after 10 seconds. Display game results. Make page refresh available.
+function isGameOver() {
+    setTimeout(() => {
+        if (playerWin + computerWin + tie === 5) {
+            gameOver = true;
+        };
+        if (gameOver === true) {
+            winCard.style.display = 'none';
+            lossCard.style.display = 'none';
+            tieCard.style.display = 'none';
+            function getGameResults() {
+                if (playerWin > computerWin) {
+                    gameOverWin.style.display = 'block';
+                    console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU are the CHAMPION!!!`);
+                } else if (computerWin > playerWin) {
+                    gameOverLoss.style.display = 'block';
+                    console.log(`You won ${playerWin}x and the computer won ${computerWin}x. YOU LOSE!!!`);
+                } else {
+                    gameOverTie.style.display = 'block';
+                    console.log(`You won ${playerWin}x and the computer won ${computerWin}x. It's a TIE!!!`);
+                }
+            }
+            getGameResults();
+            //Change play menu to replay option
+            playBtnLabel.textContent = "Replay?";
+            playBtn.style.display = 'inline-block';
+            playBtn.textContent = 'replay';
+        };
+        //Event listener to replay and reload page
+        playBtn.addEventListener('click', function(e){
+              window.location.reload();
+          });
 
-
+    }, 6000);
+}
 
