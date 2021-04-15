@@ -8259,7 +8259,13 @@ input[type=range]::-ms-thumb {
 }
 #game-card .round-result {
   font-size: 1.3rem;
-  padding: 0.5rem;
+}
+#game-card .hand-signs {
+  margin-top: -1rem;
+}
+#game-card .next-round {
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .material-icons {

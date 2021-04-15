@@ -79,8 +79,17 @@ body {
 
     & .round-result{
         font-size: 1.3rem;
-        padding: .5rem;
     }
+
+    & .hand-signs{
+        margin-top: -1rem;
+    }
+
+    & .next-round {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+  
 }
 
 .material-icons {

@@ -93,12 +93,21 @@ function showRoundResults(playerSelection, computerSelection) {
         console.log(`You threw ${playerSelection} and the computer threw ${computerSelection}. Computer wins this round!`);
         lossRoundResult.textContent = `You threw ${playerSelection} and the computer threw ${computerSelection}. You lose this round!`;
     }
+//Change the instructions after the first round
+    if (playerWin + computerWin + tie === 1){
+        playBtn.style.display = 'none';
+        //add a class list to shrink text
+        playBtnLabel.classList.add('next-round');
+        playBtnLabel.textContent = "Tap above for next round";
+    }
+
 //Disable round play after five round game
     if (playerWin + computerWin + tie === 5){
         winCard.classList.remove('activator');
         lossCard.classList.remove('activator');
         tieCard.classList.remove('activator');
-        playBtn.style.display = 'none';
+        // remove text list shrink playBtn label game over
+        playBtnLabel.classList.remove('next-round');
         isGameOver();
      };
 }
