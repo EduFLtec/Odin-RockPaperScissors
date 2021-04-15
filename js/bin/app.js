@@ -108,6 +108,7 @@ function showRoundResults(playerSelection, computerSelection) {
         tieCard.classList.remove('activator');
         // remove text list shrink playBtn label game over
         playBtnLabel.classList.remove('next-round');
+        playBtnLabel.textContent = '';
         isGameOver();
      };
 }
@@ -145,6 +146,6 @@ function isGameOver() {
               window.location.reload();
           });
 
-    }, 6000);
+    }, 5000);
 }
 
